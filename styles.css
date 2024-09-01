@@ -1,0 +1,148 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.date-calculator-container {
+    max-width: 375px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.header {
+    background-color: #007AFF;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.header-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.info-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content {
+    padding: 20px;
+}
+
+h2 {
+    color: #007AFF;
+    margin-top: 0;
+}
+
+.result {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #007AFF;
+}
+
+.date-picker {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 150px;
+    position: relative;
+}
+
+.wheel {
+    flex: 1;
+    overflow-y: scroll;
+    text-align: center;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.wheel::-webkit-scrollbar {
+    display: none;
+}
+
+.wheel-item {
+    padding: 10px 0;
+    font-size: 16px;
+    background-color: white;
+}
+
+.wheel-item.padding-item {
+    height: 30px;
+    visibility: hidden;
+}
+
+.wheel-item.selected {
+    font-weight: bold;
+    color: #007AFF;
+}
+
+.date-picker::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 30px;
+    background-color: rgba(0,122,255,0.2);
+    border: 1px solid black;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+#targetDate {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border: 1px solid #007AFF;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 5px;
+    background: #007AFF;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #007AFF;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.birthdate-finder {
+    margin-top: 30px;
+}
